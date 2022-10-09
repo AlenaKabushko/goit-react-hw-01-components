@@ -11,7 +11,7 @@ function Transactions({ transaction }) {
             </thead>
 
             <tbody>
-                {transaction.map(() => (
+                {transaction.map((transact) => (
                         <tr key={id}>
                             <td>{type}</td>
                             <td>{amount}</td>
