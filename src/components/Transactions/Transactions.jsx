@@ -1,5 +1,5 @@
 function Transactions({ transaction }) {
-    const { id, type, amount, currency } = transaction;
+    // const { id, type, amount, currency } = transaction;
     return (
         <table>
             <thead>
@@ -12,10 +12,10 @@ function Transactions({ transaction }) {
 
             <tbody>
                 {transaction.map((transact) => (
-                        <tr key={id}>
-                            <td>{type}</td>
-                            <td>{amount}</td>
-                            <td>{currency}</td>
+                        <tr key={transact.id}>
+                            <td>{transact.type}</td>
+                            <td>{transact.amount}</td>
+                            <td>{transact.currency}</td>
                         </tr>
                 ))}
             </tbody>
