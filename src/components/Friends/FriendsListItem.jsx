@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function FriendsListItem({ friends }) {
     return (
         <li>
@@ -8,3 +10,12 @@ function FriendsListItem({ friends }) {
     )
 }
 export default FriendsListItem;
+
+FriendsListItem.propTypes = {
+    friends: PropTypes.exact({
+        avatar: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        isOnline: PropTypes.bool.isRequired,
+        id: PropTypes.number.isRequired,
+    }),
+};

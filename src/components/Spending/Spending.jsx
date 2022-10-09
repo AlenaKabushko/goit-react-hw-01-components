@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function Spending({ transactions }) {
     return (
         <table>
@@ -24,3 +26,14 @@ function Spending({ transactions }) {
 }
 
 export default Spending;
+
+Spending.propTypes = {
+    transactions: PropTypes.arrayOf(
+        PropTypes.exact({
+            id: PropTypes.string.isRequired,
+            type: PropTypes.string.isRequired,
+            amount: PropTypes.string.isRequired,
+            currency: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
