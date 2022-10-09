@@ -6,7 +6,7 @@ import friends from './Friends/friends.json';
 import FriendsList from './Friends/FriendsList';
 import Transactions from './Transactions/Transactions';
 
-import transaction from './Transactions/transactions.json';
+import transactions from './Transactions/transactions.json';
 
 export const App = () => {
   return (
@@ -25,7 +25,7 @@ export const App = () => {
     
       <FriendsList friends={friends} />
       
-      <Transactions transaction={transaction}/>
+      <Transactions transactions={transactions}/>
     
     </>
   );
