@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 
-
-export const TitleSection = styled.h2`
-    font-size:  ${p => p.theme.fontSizes.l}px;
-    text-transform: uppercase;
-`;
-
 export const ProfileInfo = styled.div`
     width: 300px;
     margin: 25px auto;

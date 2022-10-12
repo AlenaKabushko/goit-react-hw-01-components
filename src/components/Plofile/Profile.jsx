@@ -2,7 +2,6 @@ import Box from 'components/Box';
 import PropTypes from 'prop-types';
 import { useTheme } from 'styled-components';
 import {
-  TitleSection,
   ProfileInfo,
   MainInfo,
   Foto,
@@ -27,7 +26,6 @@ function Profile(props) {
       fontSize={theme.fontSizes.m}
       flexDirection="column"
     >
-      <TitleSection>Профіль соціальної мережі</TitleSection>
       <ProfileInfo>
         <MainInfo>
           <Foto src={avatar} alt="User avatar" />
