@@ -1,35 +1,57 @@
+import Box from 'components/Box';
 import PropTypes from 'prop-types';
+import { useTheme } from 'styled-components';
+import {
+  TitleSection,
+  ProfileInfo,
+  MainInfo,
+  Foto,
+  MainDescr,
+  Name,
+  StatsList,
+  StatsItem,
+  StatsTitle,
+  StatsValue,
+} from './Profile.styled';
 
 function Profile(props) {
   const { username, tag, location, avatar, stats } = props;
   const { followers, views, likes } = stats;
-  
-  return (<div>
-  <div>
-    <img
-      src={avatar}
-      alt="User avatar"
-    />
-    <p>{username}</p>
-    <p>{tag}</p>
-    <p>{location}</p>
-  </div>
 
-  <ul>
-    <li>
-      <span>Followers</span>
-      <span>{followers}</span>
-    </li>
-    <li>
-      <span>Views</span>
-      <span>{views}</span>
-    </li>
-    <li>
-      <span>Likes</span>
-      <span>{likes}</span>
-    </li>
-  </ul>
-</div>)
+  const theme = useTheme();
+  return (
+    <Box
+      as="section"
+      p={theme.spase[2]}
+      bg={theme.color.bgSection}
+      fontSize={theme.fontSizes.m}
+      flexDirection="column"
+    >
+      <TitleSection>Профіль соціальної мережі</TitleSection>
+      <ProfileInfo>
+        <MainInfo>
+          <Foto src={avatar} alt="User avatar" />
+          <Name>{username}</Name>
+          <MainDescr>@{tag}</MainDescr>
+          <MainDescr>{location}</MainDescr>
+        </MainInfo>
+        <StatsList>
+          <StatsItem>
+            <StatsTitle>Followers</StatsTitle>
+            <StatsValue>{followers}</StatsValue>
+          </StatsItem>
+          <StatsItem>
+            <StatsTitle>Views</StatsTitle>
+            <StatsValue>{views}</StatsValue>
+          </StatsItem>
+          <StatsItem>
+            <StatsTitle>Likes</StatsTitle>
+            <StatsValue>{likes}</StatsValue>
+          </StatsItem>
+        </StatsList>
+      </ProfileInfo>
+    </Box>
+  );
 }
 
 export default Profile;
@@ -44,4 +66,4 @@ Profile.propTypes = {
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
   }).isRequired,
-}
+};
