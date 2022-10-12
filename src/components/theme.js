@@ -8,9 +8,9 @@ export const theme = {
         bgSecondary: '#B8E8FB',
         online: '#3CE142',
         offline: '#FA2A2D',
-        shadow: '',
-        
     },
+
+    shadows: '0px 0px 1px 0px',
 
     fontSizes: {
         xs: 12,

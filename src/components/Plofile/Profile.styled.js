@@ -3,10 +3,9 @@ import styled from 'styled-components';
 export const ProfileInfo = styled.div`
     width: 300px;
     margin: 25px auto;
-    /* padding: ${p => p.theme.spase[4]}px; */
     background-color: ${p => p.theme.color.secondary};
     border-radius: ${p => p.theme.radii.small};
-    box-shadow: 0px 0px 1px 0px;
+    box-shadow: ${p => p.theme.shadows};
     border: ${p => p.theme.borders.none};
 `;
 
