@@ -11,7 +11,7 @@ export const FriendsItemStyle = styled.li`
     gap: ${p => p.theme.spase[4]}px;
     height: 60px;
     width: 100%;
-    box-shadow: ${p => p.theme.shadows};
+    box-shadow: ${p => p.theme.color.shadow} ${p => p.theme.shadows};
     background-color: ${p => p.theme.color.secondary};
 
     &:not(:last-child) {

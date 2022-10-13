@@ -31,7 +31,7 @@ export const StatisticsItem = styled.li`
     width: 100%;
     height: 100%;
     background-color: ${getRandomHexColor()};
-    box-shadow: ${p => p.theme.shadows};
+    box-shadow: ${p => p.theme.color.shadow} ${p => p.theme.shadows};
     border: ${p => p.theme.borders.normal} ${p => p.theme.color.bgSection};   
 `;
 

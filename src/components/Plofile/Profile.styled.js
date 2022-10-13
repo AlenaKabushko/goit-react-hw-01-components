@@ -5,7 +5,7 @@ export const ProfileInfo = styled.div`
     margin: 25px auto;
     background-color: ${p => p.theme.color.secondary};
     border-radius: ${p => p.theme.radii.small};
-    box-shadow: ${p => p.theme.shadows};
+    box-shadow: ${p => p.theme.color.shadow} ${p => p.theme.shadows};
     border: ${p => p.theme.borders.none};
 `;
 

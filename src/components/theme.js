@@ -5,12 +5,13 @@ export const theme = {
         additional: '#96867E',
         bgSection: '#E5DEFB',
         bgProfile: '#EDEBE6',
-        bgSecondary: '#B8E8FB',
+        bgSecondary: '#2AC0F8',
         online: '#3CE142',
         offline: '#FA2A2D',
+        shadow: '#C0C0C0',
     },
 
-    shadows: '0px 0px 1px 0px',
+    shadows: '0px 0px 3px 3px',
 
     fontSizes: {
         xs: 12,
